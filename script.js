@@ -12,17 +12,32 @@ function generatePassword () {
     return;
   }
 
-  // var passwordChars = window.confirm ("Would you like to include lower case characters");
+  var passwordChar = window.confirm ("Would you like to include lower case characters");
 
-  // if 
+  if (true) {
+    console.log("lower")
+  }
 
-  // window.confirm ("Would you like to include UPPER case characters");
+  window.confirm ("Would you like to include UPPER case characters");
 
-  // window.confrim ("Would you like to include n7m3r1c characters");
+  if (true) {
+    console.log("upper")
+  }
 
-  // window.confirm ("Would you like to include s?e(i@l characters"); 
+  window.confirm ("Would you like to include n7m3r1c characters");
 
+  if (true) {
+    console.log("num")
+  }
 
+  window.confirm ("Would you like to include s?e(i@l characters"); 
+
+  if (true) {
+    console.log("special")
+  }
+
+  // var string (int, passwordLength)
+  // console.log (string)
 }
 
 // Write password to the #password input
