@@ -2,20 +2,27 @@
 var generateBtn = document.querySelector("#generate");
 
 function generatePassword () {
-  var userPassword = window.prompt ("Enter a password length");
+  var passwordLength = window.prompt ("Enter a password length");
 
-  // if (userPassword => 8 - 128) {
-  //   window.alert("Please enter a number between 8 and 128");
-  //   return;
-  // }
+  if (passwordLength >= 8 && passwordLength <= 128) {
+    console.log(passwordLength)
 
-  window.prompt ("Would you like to include lower case characters") 
+  } else {
+    window.alert("Please enter a value between 8 and 128")
+    return;
+  }
 
-  window.prompt ("Would you like to include UPPER case characters") 
+  // var passwordChars = window.confirm ("Would you like to include lower case characters");
 
-  window.prompt ("Would you like to include n7m3r1c characters") 
+  // if 
 
-  window.prompt ("Would you like to include s?eci@l characters") 
+  // window.confirm ("Would you like to include UPPER case characters");
+
+  // window.confrim ("Would you like to include n7m3r1c characters");
+
+  // window.confirm ("Would you like to include s?e(i@l characters"); 
+
+
 }
 
 // Write password to the #password input
