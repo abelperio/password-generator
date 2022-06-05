@@ -12,6 +12,7 @@ function generatePassword () {
     return;
   }
 
+  
   var lower = window.confirm ("Would you like to include lower case characters");
 
   if (lower === true) {
