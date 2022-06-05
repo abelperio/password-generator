@@ -12,55 +12,50 @@ function generatePassword () {
     return;
   }
 
-  var chars = ["abcdefghijklmnopqrstuvwxyz", "ABCDEFGHIJKLMNOPQRSTUVWXYZ", "0123456789", "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~$%^&*()_+"]
-  console.log(chars);
-
   var lower = window.confirm ("Would you like to include lower case characters");
 
   if (lower === true) {
-    console.log("abcdefghijklmnopqrstuvwxyz")
+    var stringLower = ("abcdefghijklmnopqrstuvwxyz")
   } else {
-    chars[0] = null
+    stringLower = ""
   }
   
   var upper = window.confirm ("Would you like to include UPPER case characters");
 
   if (upper === true) {
-    console.log("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+    var stringUpper = (stringLower + "ABCDEFGHIJKLMNOPQRSTUVWXYZ")
   } else {
-    chars[1] = null
+    stringUpper = (stringLower)
   }
 
   var num = window.confirm ("Would you like to include n7m3r1c characters");
 
   if (num === true) {
-    console.log("0123456789")
+    var stringNum = (stringUpper + "0123456789")
   } else {
-    chars[2] = null
+    stringNum = stringUpper
   }
 
  var special = window.confirm ("Would you like to include s?e(i@l characters"); 
 
  if (special === true) {
-  console.log("!#$%&'()*+,-./:;<=>?@[\]^_`{|}~$%^&*()_+")
+  var stringSpec = (stringNum + "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~$%^&*()_+")
 } else {
-  chars[3] = null
+  stringSpec = stringNum
 }
+console.log(stringSpec)
 
-console.log(chars)
-if (chars === [null, null, null, null]){
-  console.log("yes")
+if (stringSpec === "") {
   window.alert("Please select at least one charater type")
   return
 }
- 
 
-  // if (passwordChar = lower) {
-  //   var string = passwordChar.charAt(Math.floor(Math.random() * passwordLength))
-    
-  // } else {
-  //   window.alert("Please choose at least one character type")
-  //   return }
+var result = '';
+for ( var i = 0; i < passwordLength; i++ ) {
+  result += stringSpec.charAt(Math.floor(Math.random() * 
+passwordLength));
+}
+return result;
 } 
 
 
