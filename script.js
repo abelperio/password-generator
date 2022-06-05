@@ -12,33 +12,39 @@ function generatePassword () {
     return;
   }
 
-  var passwordChar = window.confirm ("Would you like to include lower case characters");
+  window.confirm ("Would you like to include lower case characters");
 
-  if (true) {
-    console.log("lower")
+  if (window.confirm = true) {
+    console.log(lower)
   }
 
   window.confirm ("Would you like to include UPPER case characters");
 
   if (true) {
-    console.log("upper")
+    console.log("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+    
   }
 
   window.confirm ("Would you like to include n7m3r1c characters");
 
   if (true) {
-    console.log("num")
+    console.log("0123456789")
   }
 
   window.confirm ("Would you like to include s?e(i@l characters"); 
 
   if (true) {
-    console.log("special")
+    console.log("!#$%&'()*+,-./:;<=>?@[\]^_`{|}~");
   }
+  
+  // if (passwordChar = lower) {
+  //   var string = passwordChar.charAt(Math.floor(Math.random() * passwordLength))
+    
+  // } else {
+  //   window.alert("Please choose at least one charcter type")
+  //   return }
+} 
 
-  // var string (int, passwordLength)
-  // console.log (string)
-}
 
 // Write password to the #password input
 function writePassword() {
