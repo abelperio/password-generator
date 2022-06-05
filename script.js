@@ -12,36 +12,54 @@ function generatePassword () {
     return;
   }
 
-  window.confirm ("Would you like to include lower case characters");
+  var chars = ["abcdefghijklmnopqrstuvwxyz", "ABCDEFGHIJKLMNOPQRSTUVWXYZ", "0123456789", "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~$%^&*()_+"]
+  console.log(chars);
 
-  if (window.confirm = true) {
-    console.log(lower)
-  }
+  var lower = window.confirm ("Would you like to include lower case characters");
 
-  window.confirm ("Would you like to include UPPER case characters");
-
-  if (true) {
-    console.log("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
-    
-  }
-
-  window.confirm ("Would you like to include n7m3r1c characters");
-
-  if (true) {
-    console.log("0123456789")
-  }
-
-  window.confirm ("Would you like to include s?e(i@l characters"); 
-
-  if (true) {
-    console.log("!#$%&'()*+,-./:;<=>?@[\]^_`{|}~");
+  if (lower === true) {
+    console.log("abcdefghijklmnopqrstuvwxyz")
+  } else {
+    chars[0] = null
   }
   
+  var upper = window.confirm ("Would you like to include UPPER case characters");
+
+  if (upper === true) {
+    console.log("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+  } else {
+    chars[1] = null
+  }
+
+  var num = window.confirm ("Would you like to include n7m3r1c characters");
+
+  if (num === true) {
+    console.log("0123456789")
+  } else {
+    chars[2] = null
+  }
+
+ var special = window.confirm ("Would you like to include s?e(i@l characters"); 
+
+ if (special === true) {
+  console.log("!#$%&'()*+,-./:;<=>?@[\]^_`{|}~$%^&*()_+")
+} else {
+  chars[3] = null
+}
+
+console.log(chars)
+if (chars === [null, null, null, null]){
+  console.log("yes")
+  window.alert("Please select at least one charater type")
+  return
+}
+ 
+
   // if (passwordChar = lower) {
   //   var string = passwordChar.charAt(Math.floor(Math.random() * passwordLength))
     
   // } else {
-  //   window.alert("Please choose at least one charcter type")
+  //   window.alert("Please choose at least one character type")
   //   return }
 } 
 
